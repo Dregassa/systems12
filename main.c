@@ -24,7 +24,7 @@ int main(){
 	int f = fork();
 
 	if (f == -1){
-		printf("First fork failed: Exiting program");
+		printf("First fork failed: Exiting program\n");
 		exit(1);
 	}
 
@@ -33,7 +33,7 @@ int main(){
 	}
 
 	if (f == -1){
-		printf("Second fork failed: Exiting program");
+		printf("Second fork failed: Exiting program\n");
 		exit(2);
 	}
 	
