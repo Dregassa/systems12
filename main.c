@@ -11,7 +11,7 @@ char child_process(){ // 1 byte of space for nap_time
 	srand(pid); //srand(time(NULL)) was causing problems
 	char nap_time = (rand() % 16) + 5; //[5,20]
 	
-	printf("(PID=%d): Child PID = %d\n", pid, pid);
+	printf("(PID=%d): NOOOOO!!!\n", pid);
 	sleep(nap_time);
 	printf("(PID=%d): Done laboring after sleeping %d seconds\n", pid, nap_time);
 	return nap_time;
@@ -20,7 +20,7 @@ char child_process(){ // 1 byte of space for nap_time
 
 int main(){
 	int pid = getpid();
-	printf("(PID=%d): Parent PID = %d\n", pid, pid);
+	printf("(PID=%d): I am your father\n", pid);
 	int f = fork();
 
 	if (f == -1){
