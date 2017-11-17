@@ -42,7 +42,8 @@ int main(){
 		int first_child = wait( &status );
 		if (first_child != -1){
 			char time_slept = (char) WEXITSTATUS(status); 
-			printf("(PID=%d): Child (PID = %d) slept %d seconds\n",pid, first_child, time_slept);
+			printf("(PID=%d): Child (PID = %d) slept %d seconds\n", pid, first_child, time_slept);
+			printf("(PID=%d): Parent Process Finished/n", pid);
 		}
 		else{
 			printf("%s\n", strerror(errno));
